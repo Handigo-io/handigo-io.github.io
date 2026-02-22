@@ -1,0 +1,59 @@
+/* Terms page uses the same look as the main site */
+
+.terms{
+  padding: 48px 0 60px;
+}
+
+.terms-card{
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.68);
+  border: 1px solid rgba(68,65,169,0.14);
+  border-radius: 18px;
+  box-shadow: 0 10px 20px rgba(35, 20, 90, 0.10);
+  padding: 28px 22px;
+}
+
+.terms h2{
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 800;
+  color:#2a1d7d;
+}
+
+.terms .updated{
+  margin: 0 0 22px;
+  font-size: 12px;
+  color: rgba(28,22,48,0.60);
+}
+
+.terms section{ margin-top: 18px; }
+
+.terms h3{
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 800;
+  color: rgba(68,65,169,0.92);
+}
+
+.terms p,
+.terms li{
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(28,22,48,0.70);
+}
+
+.terms ul{ padding-left: 20px; }
+
+.back-link{
+  font-family: "Epilogue", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color: var(--menu);
+  text-decoration: none;
+  font-weight: 600;
+}
+.back-link:hover{ text-decoration: underline; }
+
+@media (max-width: 640px){
+  .terms-card{ padding: 20px 16px; }
+  .terms h2{ font-size: 24px; }
+}

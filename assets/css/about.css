@@ -1,0 +1,96 @@
+/* ================= ABOUT ================= */
+
+.about-grid{
+  display:grid;
+  grid-template-columns: 420px 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-gestures{
+  position: relative;
+  height: 360px;
+  width: 420px;
+}
+
+.about-gesture{
+  position:absolute;
+  width:120px;
+  height:auto;
+  filter: drop-shadow(0 14px 20px rgba(30, 15, 70, 0.16));
+  transition: opacity .25s ease;
+}
+
+/* Static layout (desktop) */
+.ag1{ top: 0; left: 30px; transform: rotate(-6deg); }
+.ag2{ top: 95px; left: 140px; transform: rotate(8deg); width: 105px; }
+.ag3{ top: 170px; left: 5px; transform: rotate(-8deg); width: 110px; }
+.ag4{ top: 230px; left: 150px; transform: rotate(6deg); width: 115px; }
+
+.about-text{
+  position: relative;
+  width: 100%;
+  height: 360px;
+}
+
+.about-title{
+  position: absolute;
+  top: -50px;
+  right: 300px;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: .8px;
+  font-size: 30px;
+  color:#2a1d7d;
+  text-transform: uppercase;
+}
+
+.about-paragraph{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(28,22,48,0.65);
+}
+
+.about-paragraph.top{
+  position: absolute;
+  top: 5px;
+  right: 110px;
+  width: 280px;
+}
+
+.about-paragraph.bottom{
+  position: absolute;
+  top: 200px;
+  left: 19%;
+  transform: translateX(-50%);
+  width: 300px;
+}
+
+/* Responsive: keep your design on desktop, switch to normal flow on smaller screens */
+@media (max-width: 980px){
+  .about-grid{ grid-template-columns: 1fr; gap: 40px; }
+  .about-gestures{ height: 300px; width: min(420px, 100%); margin: 0 auto; }
+
+  .about-text{
+    height: auto;
+    padding: 0 6px;
+  }
+  .about-title{
+    position: static;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 26px;
+  }
+  .about-paragraph.top,
+  .about-paragraph.bottom{
+    position: static;
+    width: auto;
+    transform: none;
+  }
+  .about-paragraph.bottom{ margin-top: 14px; }
+}
+
+@media (max-width: 640px){
+  .about-gesture{ width: 105px; }
+}

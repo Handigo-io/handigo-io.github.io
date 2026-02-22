@@ -10,7 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- CSS (split by section) -->
+  <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/about.css" />
+  <link rel="stylesheet" href="assets/css/guide.css" />
+  <link rel="stylesheet" href="assets/css/install.css" />
 </head>
 <body>
 
@@ -19,8 +24,7 @@
     <div class="header-inner">
       <a class="brand" href="#home" aria-label="Handigo home">
         <span class="brand-stack">
-         
-          <img class="brand-img bottom" src="logo.png" alt="Handigo logo bottom">
+          <img class="brand-img" src="assets/images/logo.png" alt="Handigo logo">
         </span>
       </a>
 
@@ -50,13 +54,10 @@
     <section id="home" class="home">
       <div class="container">
         <div class="hero-image-wrap">
-          <img class="hero-image" src="hero-handigo.png" alt="Handigo hero">
+          <img class="hero-image" src="assets/images/hero-handigo.png" alt="Handigo hero">
         </div>
 
-        <p class="hero-desc">
-          <span id="typing-text"></span>
-        </p>
-
+        <p class="hero-desc"><span id="typing-text"></span></p>
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="#install">Download Now</a>
@@ -64,132 +65,115 @@
         </div>
 
         <div class="gesture-strip" aria-label="Gesture examples">
-          <img class="gesture g1" src="gesture-1.png" alt="gesture 1">
-          <img class="gesture g2" src="gesture-2.png" alt="gesture 2">
-          <img class="gesture g3" src="gesture-3.png" alt="gesture 3">
-          <img class="gesture g4" src="gesture-4.png" alt="gesture 4">
-          
+          <img class="gesture g1" src="assets/images/gesture-1.png" alt="gesture 1">
+          <img class="gesture g2" src="assets/images/gesture-2.png" alt="gesture 2">
+          <img class="gesture g3" src="assets/images/gesture-3.png" alt="gesture 3">
+          <img class="gesture g4" src="assets/images/gesture-4.png" alt="gesture 4">
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-<section id="about" class="about">
-  <div class="container about-grid">
+    <section id="about" class="about">
+      <div class="container about-grid">
 
-    <!-- LEFT: still gestures -->
-    <div class="about-gestures" aria-label="Hand gesture images">
-      <img class="about-gesture ag1" src="gesture-1.png" alt="gesture 1">
-      <img class="about-gesture ag2" src="gesture-2.png" alt="gesture 2">
-      <img class="about-gesture ag3" src="gesture-3.png" alt="gesture 3">
-      <img class="about-gesture ag4" src="gesture-4.png" alt="gesture 4">
-    </div>
-
-    <!-- RIGHT: text -->
-    <div class="about-text">
-      <h2 class="about-title">ABOUT HANDIGO</h2>
-
-      <p class="about-paragraph top">
-        Handigo is a gesture-based computer control system developed as a thesis project.
-        The application enables users to interact with desktop and laptop computers hands-free,
-        serving as an alternative to traditional input devices such as a mouse and keyboard.
-      </p>
-
-      <p class="about-paragraph bottom">
-        Using a standard webcam, Handigo detects and interprets hand gestures in real time
-        and converts them into corresponding system commands. The system is designed to promote
-        touchless interaction, improved accessibility, and enhanced user comfort.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- GUIDE -->
-<section id="guide" class="guide">
-  <div class="container">
-    <h2 class="guide-title">Guide For Installation</h2>
-
-    <div class="guide-cards">
-
-      <article class="guide-card">
-        <div class="guide-gesture">
-          <img src="gesture-1.png" alt="PC Only">
+        <!-- LEFT: still gestures -->
+        <div class="about-gestures" aria-label="Hand gesture images">
+          <img class="about-gesture ag1" src="assets/images/gesture-1.png" alt="gesture 1">
+          <img class="about-gesture ag2" src="assets/images/gesture-2.png" alt="gesture 2">
+          <img class="about-gesture ag3" src="assets/images/gesture-3.png" alt="gesture 3">
+          <img class="about-gesture ag4" src="assets/images/gesture-4.png" alt="gesture 4">
         </div>
-        <p>
-          Handigo is designed exclusively for desktop and laptop computers.
-          The application supports Windows systems using a standard webcam.
-          Mobile devices and gaming consoles are not supported.
-        </p>
-      </article>
 
-      <article class="guide-card">
-        <div class="guide-gesture">
-          <img src="gesture-2.png" alt="How it works">
+        <!-- RIGHT: text -->
+        <div class="about-text">
+          <h2 class="about-title">ABOUT HANDIGO</h2>
+
+          <p class="about-paragraph top">
+            Handigo is a gesture-based computer control system developed as a thesis project.
+            The application enables users to interact with desktop and laptop computers hands-free,
+            serving as an alternative to traditional input devices such as a mouse and keyboard.
+          </p>
+
+          <p class="about-paragraph bottom">
+            Using a standard webcam, Handigo detects and interprets hand gestures in real time
+            and converts them into corresponding system commands. The system is designed to promote
+            touchless interaction, improved accessibility, and enhanced user comfort.
+          </p>
         </div>
-        <p>
-          The system uses computer vision to detect predefined gestures and
-          convert them into mouse and keyboard commands in real time.
-        </p>
-      </article>
 
-      <article class="guide-card">
-        <div class="guide-gesture">
-          <img src="gesture-3.png" alt="Disclaimer">
+      </div>
+    </section>
+
+    <!-- GUIDE -->
+    <section id="guide" class="guide">
+      <div class="container">
+        <h2 class="guide-title">Guide For Installation</h2>
+
+        <div class="guide-cards">
+          <article class="guide-card">
+            <div class="guide-gesture">
+              <img src="assets/images/gesture-1.png" alt="PC only">
+            </div>
+            <p>
+              Handigo is designed exclusively for desktop and laptop computers.
+              The application supports Windows systems using a standard webcam.
+              Mobile devices and gaming consoles are not supported.
+            </p>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-gesture">
+              <img src="assets/images/gesture-2.png" alt="How it works">
+            </div>
+            <p>
+              The system uses computer vision to detect predefined gestures and
+              convert them into mouse and keyboard commands in real time.
+            </p>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-gesture">
+              <img src="assets/images/gesture-3.png" alt="Disclaimer">
+            </div>
+            <p>
+              This project is an academic thesis system.
+              Reverse engineering, modifying, or redistributing the source code
+              without permission is not permitted.
+            </p>
+          </article>
         </div>
-        <p>
-          This project is an academic thesis system.
-          Reverse engineering, modifying, or redistributing the source code
-          without permission is not permitted.
-        </p>
-      </article>
 
-    </div>
+        <div class="guide-confirm">
+          <label class="guide-check">
+            <input type="checkbox" id="guideCheck">
+            I have read the guide and agree to the terms.
+          </label>
 
-    <!-- NOTE -->
-    
-
-    <!-- CONFIRMATION -->
-    <div class="guide-confirm">
-      <label class="guide-check">
-        <input type="checkbox" id="guideCheck">
-        I have read the guide and agree to the terms.
-      </label>
-      
-      <p class="guide-note">
-      Note: By installing this application, you agree to use it responsibly
-      and not attempt to decompile, reverse engineer, or modify the system.
-    </p>
-
-
-    </div>
-
-
-  </div>
-</section>
-
+          <p class="guide-note">
+            Note: By installing this application, you agree to use it responsibly
+            and not attempt to decompile, reverse engineer, or modify the system.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- INSTALLATION + FOOTER -->
     <section id="install" class="install">
       <div class="container">
-
         <h2 class="install-title">Guide For Installation</h2>
 
         <div class="install-action" aria-label="Download Handigo installer">
-          <img class="install-icon" src="github-icon.png" alt="gesture icon">
-          <!-- Replace the href with your real installer/download link -->
+          <img class="install-icon" src="assets/images/github-icon.png" alt="GitHub icon">
           <a class="install-btn" href="https://www.example.com" target="_blank" rel="noopener">
             Download Installer
           </a>
         </div>
-
       </div>
 
-      <!-- FOOTER (inside same purple area like screenshot) -->
       <footer class="footer">
         <div class="footer-main">
-          <img class="footer-logo" src="logo.png" alt="Handigo logo">
+          <img class="footer-logo" src="assets/images/logo.png" alt="Handigo logo">
 
           <p class="footer-desc">
             "Wave, point, and command — your hands are the controller!"
@@ -198,46 +182,27 @@
           <div class="footer-touch">
             <div class="touch-icons">
               <a href="#" aria-label="Email" class="icon-btn">
-                <img src="github-icon.png" alt="Email">
+                <img src="assets/images/github-icon.png" alt="Email">
               </a>
 
               <a href="#" class="footer-link">Get in Touch</a>
 
               <a href="#" aria-label="Social" class="icon-btn">
-                <img src="mail.png.png" alt="Social">
+                <img src="assets/images/mail.png.png" alt="Social">
               </a>
             </div>
           </div>
-
         </div>
 
         <div class="footer-bottom">
           <span>© 2025 Handigo. All Rights Reserved.</span>
-          <a href="terms.html" class="footer-link">Terms & Conditions</a>
-
+          <a href="terms.html" class="footer-link">Terms &amp; Conditions</a>
         </div>
       </footer>
     </section>
 
   </main>
 
-  <script>
-    const btn = document.getElementById("menuBtn");
-    const mobileNav = document.getElementById("mobileNav");
-
-    btn.addEventListener("click", () => {
-      const open = mobileNav.classList.toggle("open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-
-    mobileNav.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => {
-        mobileNav.classList.remove("open");
-        btn.setAttribute("aria-expanded", "false");
-      });
-    });
-  </script>
-<script src="script.js"></script>
-
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

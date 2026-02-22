@@ -1,0 +1,127 @@
+/* ================= INSTALL + FOOTER ================= */
+
+.install{
+  flex-direction: column;
+  justify-content: space-between; /* footer sits at bottom of screen */
+}
+
+.install .container{ padding-top: 26px; padding-bottom: 0; }
+
+.install-title{
+  position: relative;
+  top: -50px;
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  color:#2a1d7d;
+  text-transform: uppercase;
+}
+
+.install-action{
+  max-width: 920px;
+  margin: 0 auto;
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  background: rgba(255,255,255,0.62);
+  border: 1px solid rgba(68,65,169,0.14);
+  border-radius: 10px;
+  box-shadow: 0 10px 18px rgba(35, 20, 90, 0.08);
+  padding: 10px 14px;
+}
+
+.install-icon{
+  width: 26px;
+  height: auto;
+  opacity: .95;
+  filter: drop-shadow(0 8px 12px rgba(30, 15, 70, 0.10));
+}
+
+.install-btn{
+  flex: 1;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration:none;
+  font-weight: 700;
+  color: #3e3ba6;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(68,65,169,0.18);
+}
+
+/* Footer */
+.footer{
+  margin-top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #FFFFFF 0%, #BD82FB 54%, #D1BAE9 100%);
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-main{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 18px 14px;
+  text-align:center;
+}
+
+.footer-logo{
+  width: 72px;
+  height: auto;
+  opacity: .9;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.18));
+}
+
+.footer-desc{
+  margin: 10px auto 10px;
+  max-width: 520px;
+  font-size: 10px;
+  line-height: 1.7;
+  color: rgba(14, 8, 8, 0.88);
+}
+
+.footer-touch{ display:flex; justify-content:center; }
+
+.touch-icons{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.icon-btn img{
+  width: 50px;
+  height: 20px;
+  object-fit: contain;
+  display:block;
+}
+
+.footer-link{
+  color: rgba(0, 0, 0, 0.88);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+.footer-link:hover{ text-decoration: underline; }
+
+.footer-bottom{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 10px 18px 16px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 12px;
+}
+
+@media (max-width: 640px){
+  .install-action{ flex-direction: column; text-align:center; }
+  .install-btn{ width: 100%; }
+  .footer-bottom{ flex-direction: column; text-align:center; }
+}
