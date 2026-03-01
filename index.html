@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Handigo</title>
+  <link rel="icon" href="assets/images/handlogo3.png" type="image/png">
 
   <!-- Epilogue (menu) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- CSS (split by section) -->
   <link rel="stylesheet" href="assets/css/common.css" />
@@ -19,24 +22,41 @@
 </head>
 <body>
 
-  <!-- HEADER (SOLID) -->
+  <div class="particles"></div>
   <header class="header">
     <div class="header-inner">
-      <a class="brand" href="#home" aria-label="Handigo home">
-        <span class="brand-stack">
-          <img class="brand-img" src="assets/images/logo.png" alt="Handigo logo">
-        </span>
-      </a>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#guide" class="nav-link">Guide</a>
-        <a href="#install" class="nav-link">Installation</a>
-      </nav>
+      <div class="left-group">
+        <a class="brand" href="#home" aria-label="Handigo home">
+          <img class="brand-img" src="assets/images/logo.png" alt="Handigo logo">
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#home" class="nav-link">
+            <i class="fa-solid fa-house"></i>
+            Home
+          </a>
+
+          <a href="#about" class="nav-link">
+            <i class="fa-solid fa-circle-info"></i>
+            About
+          </a>
+
+          <a href="#guide" class="nav-link">
+            <i class="fa-solid fa-book-open"></i>
+            Guide
+          </a>
+
+          <a href="#install" class="nav-link">
+            <i class="fa-solid fa-download"></i>
+            Installation
+          </a>
+        </nav>
+      </div>
 
       <div class="actions">
-        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+        <button class="menu-btn" id="menuBtn"
+          aria-label="Open menu" aria-expanded="false">☰</button>
       </div>
     </div>
 
@@ -105,54 +125,57 @@
       </div>
     </section>
 
-    <!-- GUIDE -->
     <section id="guide" class="guide">
       <div class="container">
-        <h2 class="guide-title">Guide For Installation</h2>
+        <h2 class="guide-title">Installation Guide & Terms</h2>
 
         <div class="guide-cards">
+          <!-- TERMS & CONDITIONS CARD -->
           <article class="guide-card">
             <div class="guide-gesture">
-              <img src="assets/images/gesture-1.png" alt="PC only">
+              <i class="fa-solid fa-file-contract fa-2x" style="color:#8A2BE2;"></i>
             </div>
+            <h3>Terms & Conditions</h3>
             <p>
-              Handigo is designed exclusively for desktop and laptop computers.
-              The application supports Windows systems using a standard webcam.
-              Mobile devices and gaming consoles are not supported.
+              By installing HandiGo, you agree to use the application responsibly.
+              Camera access is required only for real-time gesture detection. 
+              No videos, images, or biometric data are stored or transmitted externally.
             </p>
+            <ul>
+              <li>Use the app lawfully and safely</li>
+              <li>No reverse engineering, modification, or redistribution</li>
+              <li>Gesture recognition accuracy may vary with lighting and camera quality</li>
+              <li>Updates and improvements may occur at any time</li>
+            </ul>
           </article>
 
+          <!-- INSTALLATION GUIDE CARD -->
           <article class="guide-card">
             <div class="guide-gesture">
-              <img src="assets/images/gesture-2.png" alt="How it works">
+              <i class="fa-solid fa-book-open fa-2x" style="color:#8A2BE2;"></i>
             </div>
+            <h3>Installation Guide</h3>
             <p>
-              The system uses computer vision to detect predefined gestures and
-              convert them into mouse and keyboard commands in real time.
+              HandiGo is designed for Windows desktops and laptops with a standard webcam.
+              Follow the steps below to install and start using HandiGo.
             </p>
-          </article>
-
-          <article class="guide-card">
-            <div class="guide-gesture">
-              <img src="assets/images/gesture-3.png" alt="Disclaimer">
-            </div>
-            <p>
-              This project is an academic thesis system.
-              Reverse engineering, modifying, or redistributing the source code
-              without permission is not permitted.
-            </p>
+            <ul>
+              <li>Download the installer and run it</li>
+              <li>Ensure your webcam is connected and accessible</li>
+              <li>Follow the on-screen instructions to complete installation</li>
+              <li>Start controlling your computer with gestures immediately</li>
+            </ul>
           </article>
         </div>
 
         <div class="guide-confirm">
           <label class="guide-check">
             <input type="checkbox" id="guideCheck">
-            I have read the guide and agree to the terms.
+            I have read and agree to the Terms & Conditions and Installation Guide
           </label>
 
           <p class="guide-note">
-            Note: By installing this application, you agree to use it responsibly
-            and not attempt to decompile, reverse engineer, or modify the system.
+            Note: Make sure you understand the guidelines and system requirements before installing HandiGo.
           </p>
         </div>
       </div>
@@ -163,7 +186,9 @@
       <div class="container">
         <h2 class="install-title">Installation</h2>
 
-        <div class="install-action" aria-label="Download Handigo installer">
+        <p class="install-note">⚠ Please check the box above to enable installation.</p>
+        <div class="install-action disabled" aria-label="Download Handigo installer">
+          
           <img class="install-icon" src="assets/images/github-icon.png" alt="GitHub icon">
           <a class="install-btn" href="https://github.com/Handigo-io/Installation/releases/latest/download/app.exe" target="_blank" rel="noopener">
             Download Installer

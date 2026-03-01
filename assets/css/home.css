@@ -1,6 +1,7 @@
-/* ================= HOME ================= */
-
-.hero-image-wrap{ display:flex; justify-content:center; margin-top: -100px; }
+.hero-image-wrap{ 
+  display:flex; 
+  justify-content:center; 
+}
 .hero-image{
   width: min(650px, 92vw);
   height:auto;
@@ -28,8 +29,6 @@
 }
 
 .gesture-strip{
-  transform: translateY(-20px);
-  margin-top: 10px;
   display:flex;
   justify-content:center;
   gap: 26px;
@@ -44,14 +43,12 @@
   opacity:.95;
 }
 
-/* Keep your desktop layout */
 .g1{ transform: translateY(-40px) translateX(-150px) rotate(-4deg); }
-.g2{ transform: translateY(2px) translateX(-190px) rotate(3deg); }
-.g3{ transform: translateY(12px) translateX(120px) rotate(-2deg); }
-.g4{ transform: translateY(0px) translateX(120px) rotate(4deg); }
+.g2{ transform: translateY(-30px) translateX(-190px) rotate(3deg); }
+.g3{ transform: translateY(-10px) translateX(120px) rotate(-2deg); }
+.g4{ transform: translateY(-30px) translateX(120px) rotate(4deg); }
 
 @media (max-width: 980px){
-  /* Reduce offsets so gestures don't fly out of screen */
   .g1,.g2,.g3,.g4{ transform: none; }
   .gesture{ width: 200px; }
 }

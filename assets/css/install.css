@@ -5,7 +5,10 @@
   justify-content: space-between; /* footer sits at bottom of screen */
 }
 
-.install .container{ padding-top: 26px; padding-bottom: 0; }
+.install .container{ 
+  padding-top: 26px; 
+  padding-bottom: 0; 
+}
 
 .install-title{
   position: relative;
@@ -51,6 +54,44 @@
   color: #3e3ba6;
   background: rgba(255,255,255,0.75);
   border: 1px solid rgba(68,65,169,0.18);
+  transition: all 0.2s ease;
+}
+.install-action.disabled {
+  opacity: 0.5;
+  pointer-events: none; 
+  background: rgba(255, 255, 255, 0.45);
+  border-color: rgba(68, 65, 169, 0.08);
+  transition: all 0.3s ease;
+}
+
+.install-action.disabled .install-btn {
+  background: rgba(255,255,255,0.5);
+  border-color: rgba(68,65,169,0.1);
+  color: #3e3ba6;
+  cursor: not-allowed;
+}
+
+.install-note {
+  margin-bottom: 12px;          
+  font-size: 14px;
+  color: #c0392b;
+  text-align: center;
+  font-weight: 600;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.install-note.hide {
+  opacity: 0;
+  transform: translateY(-6px);
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.install-action.disabled .install-btn {
+  pointer-events: none;          
+  opacity: 0.5;                  
 }
 
 /* Footer */
@@ -120,6 +161,7 @@
   font-size: 12px;
 }
 
+/* Responsive */
 @media (max-width: 640px){
   .install-action{ flex-direction: column; text-align:center; }
   .install-btn{ width: 100%; }
